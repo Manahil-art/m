@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Registration</title>
+</head>
+<body>
+
+<h2>User Registration Form</h2>
+
+<form onsubmit="registerUser(); return false;">
+    <label>Username:</label><br>
+    <input type="text" id="username"><br><br>
+
+    <label>Age:</label><br>
+    <input type="number" id="age"><br><br>
+
+    <label>Email:</label><br>
+    <input type="email" id="email"><br><br>
+
+    <input type="submit" value="Register">
+</form>
+
+<script>
+function registerUser() {
+    // Store form values in JavaScript variables
+    let username = document.getElementById("username").value;
+    let age = document.getElementById("age").value;
+    let email = document.getElementById("email").value;
+
+    // Check if username is empty using string operation
+    if (username.trim() === "") {
+        alert("Username cannot be empty");
+    }
+    // Check if age is greater than 18
+    else if (age > 18) {
+        alert("Registration Successful!");
+    }
+    else {
+        alert("Age must be greater than 18");
+    }
+}
+</script>
+
+</body>
+</html>
